@@ -1,0 +1,49 @@
+Below are the list of API used and its functionalities for integrations -
+1. http://localhost:3000/api/student  --> Registraions pf student with studentEmail and studentPass and ID which is auto generated for students registration
+
+2. http://localhost:3000/api/student/:_id  --> login authentication for student with studentEmail and studentPass and ID which is the primary key of students login
+
+3. http://localhost:3000/api/mentor  --> Registraions of mentor with mentorEmail and mentorPass and ID which is auto generated for mentor login
+
+4. http://localhost:3000/api/mentor/:_id  --> login authentication for mentor with mentorEmail and mentorPass and ID which is the primary key of mentor login
+
+5. http://localhost:3000/api/studentinfo  --> Contains details of student with student ID in API-1 as foreign key. 
+
+6. http://localhost:3000/api/studentinfo/:_id  --> gives the information of student based on student ID generated in API-1 as input
+
+7. http://localhost:3000/api/mentorinfo  --> contains all information of mentor with major of the mentor and also the profression type of the mentor
+
+8. http://localhost:3000/api/mentorinfo/:_id  --> for particular mentor info based on the ID generated for mentor in API-3
+
+9. http://localhost:3000/api/mentorclasses  --> API for complete details of classes offered by mentors. This contains the mentor ID generated in API-3 , subjects offered, availability, and mentor type - profession or student
+
+10. http://localhost:3000/api/mentorclasses/:_id --> classed offered by a particular mentor with ID as input generated in API-3
+
+11. http://localhost:3000/api/appointments  --> API for all appointments. This table contains the associated studentID and mentorID associated with the appointment.Appointment from and to time, number of students.
+
+12. http://localhost:3000/api/appointments/api/appointments/mentor/:_id  --> appointments booked for each mentors based on the mentorID generated in API-3
+
+13. http://localhost:3000/api/appointments/api/appointments/student/:_id  --> appointments booked for each students based on studentID generated in API-1
+
+14. http://localhost:3000/api/mentorclasses/subject/:_id  --> all mentor Classes available from mentors to be fetched based on subject passed in :_id field
+
+15. http://localhost:3000/api/student/login --> Api for authentication and login of student
+
+16. http://localhost:3000/api/mentor/login  --> API for authentication and login of mentor
+
+
+Database structure -
+1. Students - contains the username and password of each student
+2. Mentor - contains the username and password of each mentor
+3. StudentInfo - contains all the information of the student and with the studentID generated in students table
+4. MentorInfo - contains all the information of mentors with profession type and subject on basis of the mentorID generated in mentor table
+5. mentorSession - contains all the session offered by the mentor with  subjects and availibility based on the mentor ID generated in mentor table
+6. appointments - contains all the appointment transactions in the application with student ID and mentor ID from student and mentor table. Also contain the appointment time and number of students
+
+
+
+File structure - 
+1. student - student.js studentinfo.js studentInfoRoutes.js sudenetRoutes.js
+2. mentor - mentor.js mentorRoutes.js mentorInfo.js mentorInfoRoutes.js
+3. classes - mentorSession.js mentorSessionRoutes.js
+4. appointments - appointment.js appointmentRoutes.js

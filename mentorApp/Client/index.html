@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Mentor-Student Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="scripts/css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default" style="background:  #212f3c;">
+         <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+            <img alt="Mentor Student App" src="...">
+            </a>
+            </div>
+         </div>
+    </nav>
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" action="/" id="loginAuth" method="post">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" id="emailID"  name="email" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="password" name="pass" class="form-control" placeholder="Password" required>
+                <div id="personType" >
+                    <div class = "row">
+                        <div class = "row">
+                            <div class = "container">
+                                <div class = "container">
+                                <div >
+                                    <table style="text-align: center;">
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="type" name="type" value="student" checked>
+                                    </td>
+                                    <td>
+                                        I am a Student
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="type" name="type" value="mentor">
+                                    </td>
+                                    <td>
+                                        I am a Mentor
+                                    </td>
+                                </tr>
+                            </table>
+                                </div>
+                            </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" onclick="loginAuth()" type="submit">Sign in</button>
+
+            </form><!-- /form -->
+            <form class="form-signin" action="/register" >
+                <button class="btn btn-danger"  type="submit">Register</button>
+            </form>
+
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
+<script type="text/javascript" src="scripts/js/main.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
